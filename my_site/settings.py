@@ -27,7 +27,7 @@ SECRET_KEY = '1)uwz=2-m5=7r15z_v6@d*afsaixuz)uuu12n+1anl$5&135c='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1','shiva-personal-blog.herokuapp.com']
 
 
 # Application definition
