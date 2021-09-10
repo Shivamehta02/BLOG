@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 from os import getenv
 from django.db.models import base
+import mimetypes
+
+
+mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("text/javascript", ".js", True)
+mimetypes.add_type("text/html", ".html", True)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +34,7 @@ SECRET_KEY = '1)uwz=2-m5=7r15z_v6@d*afsaixuz)uuu12n+1anl$5&135c='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','shiva-personal-blog.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'shiva-personal-blog.herokuapp.com']
 
 
 # Application definition
@@ -122,12 +129,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_ROOT = BASE_DIR/ "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
     BASE_DIR/"static"
 ]
 # for uplaoding suing imagefield ( using pillow )
-MEDIA_ROOT = BASE_DIR/ "uploads"
+MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/files/"

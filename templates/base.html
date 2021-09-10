@@ -12,6 +12,8 @@
     {% endblock %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+   
+    <link rel="icon" href="{% static "favicon.ico" %}"/>
   </head>
   <body>
     {% comment %} <header id="main-navigation">
@@ -20,12 +22,12 @@
         <a href="{% url 'post-page' %}">All posts</a>
       </nav>
     </header> {% endcomment %}
-  
-<nav class="navbar navbar-expand navbar-dark" style="background-color: #6305dd;"">
+ 
+<nav class="navbar navbar-expand navbar-dark" style="background-color: #6305dd;">
   <div class="container-fluid">
   
-    <a class="navbar-brand" href="#">
-      <img src="{% static  "blog/images/favicon.ico"%}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+    <a class="navbar-brand" href="{% url 'starting-page' %}">
+      <img src="{% static  "favicon.ico"%}" alt="" width="30" height="24" class="d-inline-block align-text-top">
     <a class="navbar-brand" href="{% url 'starting-page' %}">HOME</a>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
