@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 from os import getenv
 from django.db.models import base
@@ -129,12 +130,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = os.path.join(BASE_DIR , "staticfiles")
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
     BASE_DIR/"static"
 ]
 # for uplaoding suing imagefield ( using pillow )
-MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_ROOT = os.path.join(BASE_DIR , "uploads")
 MEDIA_URL = "/files/"
