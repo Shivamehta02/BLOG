@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,14 @@ STATICFILES_DIRS = [
 # for uplaoding suing imagefield ( using pillow )
 MEDIA_ROOT = os.path.join(BASE_DIR , "uploads")
 MEDIA_URL = "/files/"
+
+AWS_STORAGE_BUCKET_NAME = "shiva-blog"
+AWS_S3_REGION_NAME = "ap-south-1"
+AWS_ACCESS_KEY_ID = "AKIASU5HYR5CHGZ4IW5O"
+AWS_SECRET_ACCESS_KEY = "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"
+
+AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
