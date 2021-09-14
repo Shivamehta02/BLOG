@@ -90,12 +90,8 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER':'shivamehta',
-        'PASSWORD':'mehta1965',
-        'HOST':'shiva-blog.cluu3lrfosua.ap-south-1.rds.amazonaws.com',
-        'PORT':'5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
