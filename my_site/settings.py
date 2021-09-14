@@ -95,7 +95,7 @@ DATABASES = {
         'USER':'shivamehta',
         'PASSWORD':'mehta1965',
         'HOST':'shiva-blog.cluu3lrfosua.ap-south-1.rds.amazonaws.com',
-        'PORT':'5432',
+        'PORT':'5432'
     }
 }
 
