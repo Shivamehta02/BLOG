@@ -10,12 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import os
-from pathlib import Path
-from os import getenv
-from django.db.models import base
 import mimetypes
+import os
+from os import getenv
+from pathlib import Path
 
+from django.db.models import base
 
 mimetypes.add_type("text/css", ".css", True)
 mimetypes.add_type("text/javascript", ".js", True)
@@ -90,12 +90,18 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER':'shivamehta',
+        'PASSWORD':'mehta1965',
+        'HOST':'shiva-blog.cluu3lrfosua.ap-south-1.rds.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
-
+import dj_database_url
+db_from_env = DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env) 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
