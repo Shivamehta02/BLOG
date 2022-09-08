@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import mimetypes
-from msilib.schema import AdminExecuteSequence
 import os
 from os import getenv
 from pathlib import Path
