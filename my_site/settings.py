@@ -14,6 +14,7 @@ import mimetypes
 import os
 from os import getenv
 from pathlib import Path
+from pickle import TRUE
 
 from django.db.models import base
 
@@ -33,9 +34,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '1)uwz=2-m5=7r15z_v6@d*afsaixuz)uuu12n+1anl$5&135c='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = TRUE
 
-ALLOWED_HOSTS = ['127.0.0.1', 'shiva-personal-blog.herokuapp.com']
+# ALLOWED_HOSTS = ['127.0.0.1', 'shiva-personal-blog.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,33 +90,33 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
-
     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': 'd3rhdr9n36rdks',
-
-        'USER': 'htefyqrxmcqieb',
-
-        'PASSWORD': 'd63f5c5a89c3968030adae7129119b73dddf25bd93d1c362b16f3a6831857e57',
-
-        'HOST': 'ec2-44-198-146-224.compute-1.amazonaws.com',
-
-        'PORT': '5432',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
-
 }
+
+
+# DATABASES = {
+
+#     'default': {
+
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+#         'NAME': 'd3rhdr9n36rdks',
+
+#         'USER': 'htefyqrxmcqieb',
+
+#         'PASSWORD': 'd63f5c5a89c3968030adae7129119b73dddf25bd93d1c362b16f3a6831857e57',
+
+#         'HOST': 'ec2-44-198-146-224.compute-1.amazonaws.com',
+
+#         'PORT': '5432',
+
+#     }
+
+# }
 
 
 
